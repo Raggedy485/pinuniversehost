@@ -1,0 +1,163 @@
+
+
+/* Posicionamiento del Logo */
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+    transition: all .5s;
+}
+
+/* Dimensiones y propiedades del Logo */
+.logo{
+    height: 100px;
+    transition: all .5s;
+}
+
+/* Header del Sitio */
+nav{
+    background-image: linear-gradient(to bottom, #090101a0, #09010100);
+    height: 80px;
+    width: 100%;
+    padding: 0 5%;
+    font-family: 'IBM Plex Mono', monospace;
+    
+}
+
+
+/* Posicionamiento del Menu de Navegacion */
+nav ul{
+    float: right;
+    margin-right: 20px;
+    margin-right: 50px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+
+/* Posicionamiento de los elementos del Menu de Navegacion */
+nav ul li {
+    display: inline-block;
+    line-height: 150px;
+    margin: 0 5px;
+    justify-content: center;
+    vertical-align: bottom;
+}
+
+
+/* Links dentro del menu de navegacion */
+nav ul li a{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+/* Comportamiento del menu de navegacion cuando el mouse estra sobre algun elemento */
+li.active, li:hover{
+    background-image: linear-gradient(to bottom, #6aff0057, #231c4500);
+    font-weight: bold;
+}
+
+
+
+/* Menu de hamburguesa */
+.checkbtn{
+    font-size: 30px;
+    margin-top: 20px;
+    color:#ffffff;
+    float: left;
+    line-height: 80px;
+    margin-left: 40px;
+    cursor: pointer;
+    display: none;
+    transition: all .5s;
+}
+
+/* Estado del check, por defecto esta desactivada*/
+#check{
+    display: none;  
+}
+
+
+
+
+/* Cambios cuando la pantalla se hace mediana */
+@media (max-width: 925px){
+
+    /* Cambio del tamaño del logo*/
+    .enlace{
+        padding-left: 20px;
+        transition: all .5s;
+    }
+    /* Cambio de tamaño de los elementos dentro del menu de navegacion*/
+    nav ul li a{
+        
+        font-size: 16px;
+        transition: 0.5s;
+        transition: all .5s;
+    }
+    
+    
+}
+
+
+/* Cambios cuando la pantalla se hace de tamaño chica */
+@media (max-width: 850px){
+    .checkbtn{
+        display: block;
+        transition: all .5s;
+    }
+    /* Cambio de tamaño del logo y del posicionamiento */
+    .logo{
+        height: 80px;
+        align-self: center;
+        transition: all .5s;
+    }
+    /* Menu Lateral de navegacion */
+    ul{
+        position: fixed;
+        width: 80%;
+        height: 100vh;
+        background-color: #372c6d;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    /* Posicionamiento de los elementos dentro del menu desplegable */
+    nav ul li{
+        color: red;
+        display: block;
+        margin: 50px 0;
+        line-height: 50px;
+        transition: all .5s;
+    }
+    /* Caracteristicas de los elementos dentro del menu de navegacion de hamburguesa */
+    nav ul li a{
+        font-size: 20px;
+        transition: all .5s;
+    }
+    /* Comportamiento de los elemntos dentro del menu de navegacion de hamburgesa cuando se hoverean */
+    li a:hover, li a.active{
+        
+        background: none;
+        color: #ffffff;
+        transition: all .5s;
+    }
+    #check:checked ~ ul{
+        left:0;
+        transition: all .5s;
+    }
+    /* Posicionamiento del logo*/
+    .enlace{
+        margin-left: 20%;
+    }
+    
+
+
+}
+
+
+
+
+
